@@ -1,0 +1,126 @@
+/* Container for the entire team section */
+.wrapper {
+    padding: 20px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .chief-guest-paragraph {
+    margin: 0px 160px 60px 160px;;
+    font-size: 18px;
+    z-index: 10;
+    line-height: 1.6;
+    text-align: justify;
+    font-weight: normal;
+  }
+  
+  /* Header style for team section */
+  .heading-h1 {
+    text-align: center;
+    font-size: 3rem;
+    z-index: 10;
+    margin-bottom: 40px;
+  }
+  
+  /* Main wrapper for all team member blocks */
+  .team-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    gap: 50px; /* Increased gap between team members */
+  }
+  
+  /* Styling for individual team member block */
+  .team_member-wrap {
+    position: relative;
+    width: 300px; /* Increased width for horizontal layout */
+    height: 400px; /* Increased height */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Styling for team member image container */
+  .team_memeber-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+  }
+  
+  /* Styling for team member image */
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Overlay style for image on hover */
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Hover effect on the team member block */
+  .team_member-wrap:hover .image-overlay {
+    opacity: 1;
+  }
+  
+  /* Styling for team member information section */
+  .team_member-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly reduced opacity for details */
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(20px); /* Start off below the container */
+  }
+  
+  /* Hover effect on team member information */
+  .team_member-wrap:hover .team_member-info {
+    transform: translateY(0); /* Move up to the normal position */
+  }
+  
+  /* Styling for team member name */
+  .heading-h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+  }
+  
+  /* Styling for team member role */
+  .paragraph-opacity {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin: 10px 0;
+    display: none; /* Hide role by default */
+  }
+  
+  /* Styling for team member description */
+  .paragraph {
+    font-size: 1rem;
+    color: #fff;
+    display: none; /* Hide description by default */
+  }
+  
+  /* Show role and description when hovered */
+  .team_member-wrap:hover .paragraph-opacity,
+  .team_member-wrap:hover .paragraph {
+    display: block;
+  }
+  
